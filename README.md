@@ -9,10 +9,11 @@
 
 ## Смена владельца на /var/www/html
 TODO надо сделать чтобы docker автоматом это делал
+```
 docker exec -it CONTAINER_HASH_NAME bash
 cd /var/www/html
 chown -R www-data:www-data ./
-
+```
 
 
 ## При пересборке images если меняется версия mysql (а может и php - надо проверить), надо удалить содержимое и проверить права на data/mysql:
