@@ -20,22 +20,35 @@ data/mysql
 
 
 
-# ? "user: mysql" https://github.com/sprintcube/docker-compose-lamp/issues/221#issuecomment-1368099894
+## vhosts 
+config/vhosts/default.conf
+
+
+
+## Как настраиватеся БД в WP
+1. В phpmyadmin (http://localhost:8080/) нужно выставить полные привелегии для user "docker" на БД "yamdiet.com"
+2: www/wp-config.php:
+   !!! database:3306 - как отображается в phpmyadmin (http://localhost:8080/) наверху слева
+```
+define('DB_NAME', 'yamdiet.com');
+define('DB_USER', 'docker');
+define('DB_PASSWORD', 'docker');
+define('DB_HOST', 'database:3306');
+```
+
+
+
+## ? Изменение прав на файлы через Dockerfile
+RUN usermod -u 1000 www-data
+
+
+
+# ? mysql "user: mysql" https://github.com/sprintcube/docker-compose-lamp/issues/221#issuecomment-1368099894
 database:
   user: mysql
 
 
 
-```
-/** Имя базы данных для WordPress */
-define('DB_NAME', 'yamdiet.com');
-
-/** Имя пользователя MySQL */
-define('DB_USER', 'docker');
-
-/** Пароль к базе данных MySQL */
-define('DB_PASSWORD', 'docker');
-
-/** Имя сервера MySQL */
-define('DB_HOST', 'database:3306');
-```
+# ??? моя догадка - php "user: www-data" 
+webserver:
+  user: www-data
