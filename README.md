@@ -26,7 +26,7 @@ As of now, we have several different PHP versions. Use appropriate php version a
 
 - Clone this repository on your local computer
 - configure .env as needed
-- Run the `docker-compose up -d`.
+- Run the `docker compose up -d`.
 
 ```shell
 git clone https://github.com/sprintcube/docker-compose-lamp.git
