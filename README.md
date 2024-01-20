@@ -8,7 +8,7 @@
 
 
 ## Смена владельца на /var/www/html
-### TODO надо сделать чтобы docker автоматом это делал
+TODO надо сделать чтобы docker автоматом это делал
 docker exec -it CONTAINER_HASH_NAME bash
 cd /var/www/html
 chown -R www-data:www-data ./
