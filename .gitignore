@@ -6,3 +6,9 @@
 /www/**
 .DS_Store
 /buildtest
+
+
+
+*.zip
+*.tar
+*.sql
