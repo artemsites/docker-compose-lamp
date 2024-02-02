@@ -14,12 +14,13 @@ TODO надо сделать чтобы docker автоматом это дел�
 docker exec -it CONTAINER_HASH_NAME bash
 cd /var/www/html
 chown -R www-data:www-data ./favicons ./wp-admin ./wp-includes
+
 cd wp-content/
 chown -R www-data:www-data ./plugins ./cache ./languages/ ./settings/ ./upgrade/ ./uploads ./uploads-adaptive
 
-или убрать временно папку с темой www/wp-content/themes/yamdiet и:
+# или убрать временно папку с темой www/wp-content/themes/yamdiet и:
 chown -R www-data:www-data ./
-- и затем вернуть папку с темой (так как в ней мы работаем из основной ОС а не из докера)
+# - и затем вернуть папку с темой (так как в ней мы работаем из основной ОС а не из докера)
 ```
 
 
