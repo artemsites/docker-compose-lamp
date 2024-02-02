@@ -1,4 +1,5 @@
-## Запускаем Docker Desktop
+## Запускаем Docker Desktop и dockerd
+* sudo dockerd
 * в www кладём php - сайт
 * в config/initdb кладём базу (.sh, .sql, .sql.gz and .sql.xz)
 * docker compose up -d
