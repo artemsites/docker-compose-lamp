@@ -8,6 +8,11 @@
 
 
 
+## Запуск bash в container
+`docker exec -it 0750f6d13e2e bash`
+
+
+
 ## Смена владельца на /var/www/html
 TODO надо сделать чтобы docker автоматом это делал
 ```
