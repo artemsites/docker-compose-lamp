@@ -1,10 +1,13 @@
+.vscode
 .lh
+www/**
+
+
+
 /.env
-/.vscode
 /config/*
 /data/*
 /logs/*
-/www/**
 .DS_Store
 /buildtest
 
