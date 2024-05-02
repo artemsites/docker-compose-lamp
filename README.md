@@ -69,6 +69,6 @@ database:
 
 
 
-## ??? моя догадка - php "user: www-data" 
+## ? php "user: www-data" 
 webserver:
   user: www-data
